@@ -29,8 +29,8 @@ section { width:min(1240px,100%); padding:88px 36px; margin:auto; }
 .wave i { background:var(--ye); width:4px; height:100%; border-radius:4px; animation:wave 1.4s ease-in-out infinite; }
 @keyframes wave { 0%,100% { transform:scaleY(.3); } 50% { transform:scaleY(1); } }
 nav { position:sticky; top:16px; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1240px; min-height:74px; margin:16px auto 0; padding:12px 18px 12px 26px; border:1px solid var(--line); border-radius:24px; background:#111111ed; backdrop-filter:blur(20px); box-shadow:0 8px 32px #0002; }
-nav>b { font:800 1rem var(--d); letter-spacing:-.04em; white-space:nowrap; }
-nav>b::before { content:'✳'; color:var(--ye); font-size:1.6rem; vertical-align:middle; margin-right:10px; }
+nav>b { display:inline-flex; align-items:center; gap:10px; font:800 1rem var(--d); letter-spacing:-.04em; white-space:nowrap; }
+.brand-icon { flex:none; width:30px; height:30px; color:var(--ye); }
 nav ul { list-style:none; display:flex; align-items:center; gap:23px; margin:0; padding:0; }
 nav ul a { font-size:.78rem; font-weight:500; color:#cccccc; text-decoration:none; transition:color .2s; }
 nav ul a:hover { color:var(--ye); }
@@ -329,7 +329,8 @@ body.has-player { padding-bottom:calc(var(--player-height,430px) + 24px + env(sa
   html { scroll-padding-top:100px; }
   nav { gap:8px; padding:8px 12px; margin:8px 10px 0; }
   nav>b { font-size:.78rem; }
-  nav>b::before { font-size:1.3rem; margin-right:6px; }
+  nav>b { gap:6px; }
+  .brand-icon { width:26px; height:26px; }
   #mb { padding:8px 12px; }
   .hero { padding:36px 20px 44px; gap:28px; }
   .hero h1 { font-size:clamp(3.3rem,18vw,5rem); }

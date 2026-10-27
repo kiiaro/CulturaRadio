@@ -27,7 +27,7 @@ export default function App() {
     setArtist(null);
   }
   return <>
-<nav id="nav" className={menuOpen ? "open" : ""}><b>MOSTRA 2026</b><button id="mb" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="ul">MENU</button>
+<nav id="nav" className={menuOpen ? "open" : ""}><b><svg className="brand-icon" viewBox="0 0 36 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="33" height="23" rx="4" fill="currentColor" fillOpacity=".08" /><path d="M18 5.5 31 14 18 22.5 5 14Z" fill="currentColor" fillOpacity=".16" /><circle cx="18" cy="14" r="5.2" /><path d="M13.2 12.1c3.2-.4 6.7.6 9.6 3" /><circle cx="18.7" cy="16.6" r=".65" fill="currentColor" stroke="none" /><circle cx="16.2" cy="15.5" r=".45" fill="currentColor" stroke="none" /></svg>MOSTRA 2026</b><button id="mb" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="ul">MENU</button>
 <ul id="ul" onClick={() => setMenuOpen(false)}><li><a href="#mostra">Mostra 2026</a></li><li><a href="#artistas">Artistas</a></li><li><a href="#ritmos">Ritmos</a></li><li><a href="#tempo">Linha do tempo</a></li><li><a href="#sobre">Sobre</a></li><li className="cta-m"><a className="btn p" href="#artistas">Explorar</a></li></ul>
 <button id="theme-toggle" className="theme-toggle" type="button" onClick={toggleTheme} aria-label={themeLabel} title={themeLabel}>
 <span className="theme-icons" aria-hidden="true">
