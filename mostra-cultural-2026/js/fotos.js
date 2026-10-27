@@ -48,3 +48,5 @@ creditosFotos["jorge-ben-jor"] = {"autor":"Ricardo Giusti / PMPA","licenca":"Att
 fotos["nara-leao"] = "assets/artistas/nara-leao.jpg";
 posicaoFotos["nara-leao"] = "50%";
 creditosFotos["nara-leao"] = {"autor":"Daniel Faria 69","licenca":"CC0","licencaUrl":"http://creativecommons.org/publicdomain/zero/1.0/deed.en","pagina":"https://commons.wikimedia.org/wiki/File:Narinha.jpg"};
+
+export { creditosFotos, fotos, posicaoFotos };

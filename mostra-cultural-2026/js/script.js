@@ -1,5 +1,7 @@
 // ---------- FUNÇÕES E INICIALIZAÇÃO ----------
 // Este arquivo usa os dados de dados.js e as fotos de fotos.js
+import { artistas, coresRegiao, linhaDoTempo, regioes, ritmos } from './dados.js';
+import { creditosFotos, fotos, posicaoFotos } from './fotos.js';
 
 // ---------- 2. FUNÇÕES AUXILIARES ----------
 function pegar(seletor) {

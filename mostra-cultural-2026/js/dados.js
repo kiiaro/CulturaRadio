@@ -560,3 +560,5 @@ const linhaDoTempo = [
   { periodo: "1990–2000", texto: "Diversificação dos estilos." },
   { periodo: "2000–atualidade", texto: "Novas formas de produção e distribuição musical." }
 ];
+
+export { artistas, coresRegiao, linhaDoTempo, regioes, ritmos };
