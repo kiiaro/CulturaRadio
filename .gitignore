@@ -1,3 +1,9 @@
 node_modules/
 dist/
+.vercel/
 .netlify/
+.env
+.env.*
+!.env.example
+*.local
+.vite/
