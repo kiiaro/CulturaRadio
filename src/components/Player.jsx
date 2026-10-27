@@ -26,13 +26,22 @@ export default function Player(props) {
 
 function TrackPlayer({ artist, index, onChange, onClose }) {
   const container = useRef(null);
+  const panel = useRef(null);
   const [status, setStatus] = useState('Carregando música…');
   const [retry, setRetry] = useState(0);
   const [videoId, setVideoId] = useState(null);
   const track = artist.musicas[index];
   useEffect(() => {
     document.body.classList.add('has-player');
-    return () => document.body.classList.remove('has-player');
+    const reserveSpace = () => document.body.style.setProperty('--player-height', `${panel.current.getBoundingClientRect().height}px`);
+    reserveSpace();
+    const observer = new ResizeObserver(reserveSpace);
+    observer.observe(panel.current);
+    return () => {
+      observer.disconnect();
+      document.body.classList.remove('has-player');
+      document.body.style.removeProperty('--player-height');
+    };
   }, []);
   useEffect(() => {
     let disposed = false;
@@ -81,7 +90,7 @@ function TrackPlayer({ artist, index, onChange, onClose }) {
     start();
     return () => { disposed = true; controller.abort(); player?.destroy(); host.replaceChildren(); };
   }, [artist, track, retry]);
-  return <section id="mp" aria-label="Player de músicas">
+  return <section ref={panel} id="mp" aria-label="Player de músicas">
     <div className="player-heading"><strong id="mt">{track.titulo} — {artist.nome}</strong><button type="button" onClick={onClose} aria-label="Fechar player e parar reprodução">✕</button></div>
     <div className="player-video" ref={container} />
     <p id="player-status" role="status" aria-live="polite">{status}</p>
