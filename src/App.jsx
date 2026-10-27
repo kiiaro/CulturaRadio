@@ -62,14 +62,16 @@ export default function App() {
 <section id="tempo"><span className="k">Linha do tempo</span><h2>Uma história em ritmos</h2><div className="tl" id="tl">{linhaDoTempo.map((item,i) => <button key={item.periodo} aria-expanded={period === i} onClick={() => setPeriod(i)}><h3>{item.periodo}</h3><p>{item.texto}</p></button>)}</div></section>
 
 <section className="light" id="sobre"><div className="rv"><span className="k">Sobre a mostra</span><h2>Mostra Cultural 2026</h2><h3 style={{fontSize: "2.2rem", color: "var(--tc)"}}>Brasil Plural: um país de muitos Brasis</h3>
-<p style={{maxWidth: "660px", fontSize: "1.1rem"}}>Este projeto foi desenvolvido pela turma <b>3º C — Desenvolvimento de Sistemas (ADS)</b> do <b>MEDIOTEC — SENAC</b>, como parte da Mostra Cultural 2026. A proposta é explorar a diversidade da música brasileira através de diferentes artistas, gêneros, regiões e períodos históricos.</p>
+<p style={{maxWidth: "660px", fontSize: "1.1rem"}}>Este projeto foi desenvolvido pela turma <b>3º C — Desenvolvimento de Sistemas (DS)</b> do <b>MEDIOTEC — SENAC</b>, como parte da Mostra Cultural 2026. A proposta é explorar a diversidade da música brasileira através de diferentes artistas, gêneros, regiões e períodos históricos.</p>
 <h3 style={{fontSize: "2rem", marginTop: "36px"}}>Fontes e créditos</h3>
 <p style={{maxWidth: "660px"}}><b>Informações:</b> <a href="https://pt.wikipedia.org">Wikipédia (apoio)</a>, <a href="https://enciclopedia.itaucultural.org.br">Enciclopédia Itaú Cultural</a>, conferir em fontes institucionais. <b>Fotografias:</b> imagens do <a href="https://commons.wikimedia.org">Wikimedia Commons</a>, com créditos e licenças nas fichas dos artistas. <b>Música:</b> reprodução e busca pelo <a href="https://www.youtube.com">YouTube</a>.</p></div></section>
 
-<section className="cr"><span className="k" style={{color: "var(--ye)"}}>Desenvolvido pela turma</span><h2>3º C</h2><h3>DESENVOLVIMENTO DE SISTEMAS • ADS</h3>
-<p>MEDIOTEC — SENAC • MOSTRA CULTURAL 2026<br />BRASIL PLURAL: UM PAÍS DE MUITOS BRASIS</p><code>&lt;/ cultura &gt; {'{ código: "música brasileira" }'}</code></section>
+    <section className="cr"><span className="k" style={{ color: "var(--ye)" }}>Desenvolvido pela turma</span><h2>3º C</h2><h3>DESENVOLVIMENTO DE SISTEMAS • DS</h3>
+      <p>MEDIOTEC — SENAC • MOSTRA CULTURAL 2026<br />BRASIL PLURAL: UM PAÍS DE MUITOS BRASIS</p><code>&lt;cultura &gt; {'{ código: "música brasileira" }'} &lt;/ cultura &gt; </code>
+      <p>Projeto desenvolvido pelos estudantes Alisson Marinho e Henrique do Nascimento com orientação do Instrutor Henrique Venâncio</p>
+    </section>
 
-<footer><div className="footer-institution"><span className="senac-mark"><img src="assets/senac-logo.png" alt="Senac" width="148" height="79" loading="lazy" /></span><span>Uma mostra cultural do<br /><strong>MEDIOTEC · SENAC</strong></span></div><div><b style={{font: "1.8rem var(--d)"}}>MOSTRA CULTURAL 2026</b><br />Brasil Plural: Um País de Muitos Brasis<br />Projeto desenvolvido pela turma 3º C — Desenvolvimento de Sistemas (ADS)<br />MEDIOTEC — SENAC</div>
+<footer><div className="footer-institution"><span className="senac-mark"><img src="assets/senac-logo.png" alt="Senac" width="148" height="79" loading="lazy" /></span><span>Uma mostra cultural do<br /><strong>MEDIOTEC · SENAC</strong></span></div><div><b style={{font: "1.8rem var(--d)"}}>MOSTRA CULTURAL 2026</b><br />Brasil Plural: Um País de Muitos Brasis<br />Projeto desenvolvido pela turma 3º C — Desenvolvimento de Sistemas (DS)<br />MEDIOTEC — SENAC</div>
 <ul><li><a href="#mostra">Início</a></li><li><a href="#artistas">Artistas</a></li><li><a href="#ritmos">Ritmos</a></li><li><a href="#tempo">Linha do tempo</a></li><li><a href="#sobre">Sobre</a></li></ul><em>Um país. Muitos ritmos. Infinitas histórias.</em></footer>
 
 <ArtistDialog artist={artist} onClose={() => setArtist(null)} onPlay={selectTrack} />
